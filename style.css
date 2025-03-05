@@ -1,0 +1,115 @@
+/* Importando a fonte */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); /* Importando os estilos padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilizando o corpo da página */
+body {
+    height: 100vh;
+    background: linear-gradient(120deg, #ffffff, #000000);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Estilizando o título */
+h1 {
+    color: #111;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    font-size: 2em; /* Ajusta o tamanho da fonte */
+    text-align: center; /* Centraliza o texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona sombra à letra */
+}
+
+/* Estilizando o contêiner do relógio */
+.relogio-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilizando o relógio */
+.relogio {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 200px;
+    width: 550px;
+    background: transparent;
+    border-radius: 3px;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, .5);
+}
+
+/* Estilizando as horas, minutos e segundos */
+.hora, .minuto, .segundo {
+    height: 170px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: rgba(5, 5, 5, .9);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .7);
+    border-radius: 7px;
+    letter-spacing: 3px;
+}
+
+span {
+    font-weight: bolder;
+    font-size: 60px;
+}
+
+.tempo {
+    font-size: 10px;
+}
+
+/* Estilizando a barra de navegação */
+nav {
+    width: 100%;
+    background-color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #111;
+}
+
+/* Estilizando o relógio em modo retrato */
+@media (orientation: portrait) {
+    .relogio {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 550px;
+        width: 200px;
+    }
+    .hora, .minuto, .segundo {
+        height: 150px;
+        width: 170px;
+    }
+}
